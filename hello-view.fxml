@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0" prefWidth="602.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+   <children>
+      <MenuBar layoutY="1.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="New" />
+                  <CheckMenuItem mnemonicParsing="false" text="Live Server" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Exit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Delete" />
+                  <RadioMenuItem mnemonicParsing="false" text="Auto Save" />
+                  <RadioMenuItem mnemonicParsing="false" text="Don't ask again">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="option" />
+                     </toggleGroup>
+                  </RadioMenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Clear">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="FAQ" />
+                  <MenuItem mnemonicParsing="false" text="Server" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Pane layoutY="-4.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="411.0" prefWidth="609.0">
+         <children>
+            <ImageView fitHeight="238.0" fitWidth="341.0" layoutX="259.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+               <viewport>
+                  <Rectangle2D />
+               </viewport>
+               <image>
+                  <Image url="@../../../../../../../../OneDrive/Pictures/0a9f7ba81bbad52f37592fec9170db494a511659.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="46.0" prefHeight="54.0" prefWidth="254.0" text="BMI Calculator" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="123.0" prefHeight="17.0" prefWidth="187.0" text="Height (m)">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="192.0" prefHeight="17.0" prefWidth="187.0" text="Weight (kg)">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tf1" layoutX="66.0" layoutY="147.0" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: lightgreen;" />
+            <TextField fx:id="tf2" layoutX="66.0" layoutY="216.0" prefHeight="25.0" prefWidth="187.0" style="-fx-background-color: lightgreen; -fx-border-radius: 2px;" />
+            <Button layoutX="259.0" layoutY="284.0" mnemonicParsing="false" onAction="#calculate_BMI" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: lightblue;" text="Calculate">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label layoutX="66.0" layoutY="335.0" prefHeight="17.0" prefWidth="101.0" style="-fx-background-color: white;" text="Your BMI Value :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb1" layoutX="167.0" layoutY="336.0" prefHeight="17.0" prefWidth="436.0" />
+            <Label layoutX="66.0" layoutY="362.0" prefHeight="17.0" prefWidth="101.0" style="-fx-background-color: white;" text="Your Category :">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lb2" layoutX="167.0" layoutY="363.0" prefHeight="17.0" prefWidth="436.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
